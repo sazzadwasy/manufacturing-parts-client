@@ -10,7 +10,7 @@ const Navbar = () => {
             <li><Link to='/manageallorders'>Manage all orders</Link></li>
         </>
     return (
-        <div class="navbar bg-base-100">
+        <div class="navbar bg-base-100 py-4">
             <div class="navbar-start">
                 <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -20,7 +20,7 @@ const Navbar = () => {
                         {navbarOptions}
                     </ul>
                 </div>
-                <Link to='/' class="btn btn-ghost normal-case text-2xl text-teal-600">Manufacturer Parts</Link>
+                <Link to='/' class="btn btn-ghost normal-case text-3xl font-bold text-cyan-800">Manufacturer Parts</Link>
             </div>
             <div class="navbar-end hidden lg:flex">
                 <ul class="menu menu-horizontal p-0">
