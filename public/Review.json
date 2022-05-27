@@ -1,0 +1,20 @@
+[
+    {
+        "_id": 5,
+        "name": "Wasy",
+        "description": "The cylinder head is a three-piece assembly consisting of a lower member that contains the gas passages, serves as a mounting for the injector valves and the ignition plug, and forms part of the combustion chamber",
+        "ratings": "5 star"
+    },
+    {
+        "_id": 6,
+        "name": "Sazzad",
+        "description": "The idle air control (IAC) valve is located on the throttle body of fuel-injected engines, where it works with the vehicles ECU to electrically regulate airflow to the engine to ensure smooth idling",
+        "ratings": "5 star"
+    },
+    {
+        "_id": 7,
+        "name": "Arham",
+        "description": "A turbocharger is a system that helps an engine produce more power and torque through forced induction. Essentially, a turbo sucks in air, chills it, and then force-feeds the engine more air than what it would get through its standard intake",
+        "ratings": "5 star"
+    }
+]

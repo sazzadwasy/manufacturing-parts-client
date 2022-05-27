@@ -8,6 +8,7 @@ const Navbar = () => {
             <li><Link to='/myprofile'>My profile</Link></li>
             <li><Link to='/myorders'>My orders</Link></li>
             <li><Link to='/manageallorders'>Manage all orders</Link></li>
+            <li><Link to='/login'>Login</Link></li>
         </>
     return (
         <div class="navbar bg-base-100 py-4">
