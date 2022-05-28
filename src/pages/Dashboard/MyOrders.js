@@ -12,7 +12,31 @@ const MyOrders = () => {
     }, [user])
     return (
         <div>
-            <h1>My Orders : {orders.length}</h1>
+            <div class="overflow-x-auto">
+                <table class="table w-full">
+
+                    <thead>
+                        <tr>
+                            <th>Part</th>
+                            <th>Buyer</th>
+                            <th>Quantity</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            orders.map(order => <tr>
+                                <td>{order.PartName}</td>
+                                <td>{order.UserName}</td>
+                                <td>{order.Quantity}</td>
+                                <td>{order.UserEmail}</td>
+
+                            </tr>)
+                        }
+
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };

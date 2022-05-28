@@ -2,7 +2,9 @@ import React from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
+import { useToast } from 'react-toastify';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 import Loading from '../Shared/Loading';
 
 const Signup = () => {
@@ -17,6 +19,9 @@ const Signup = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     let signInError;
     const navigate = useNavigate()
+
+    const [token] = useToken(user || gUser)
+
     if (loading || googleLoading || updating) {
         return <Loading></Loading>
     }
@@ -24,14 +29,15 @@ const Signup = () => {
         signInError = <p className='text-red-500'>{error?.message || gError?.message}</p>
     }
 
+    if (token) {
+        navigate('/home')
+    }
+
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password)
         await updateProfile({ displayName: data.name });
         console.log(data);
-        navigate('/home')
-    }
-    if (user || gUser) {
-        navigate('/home')
+        // navigate('/home')
     }
     return (
         <div className='flex h-screen justify-center items-center'>

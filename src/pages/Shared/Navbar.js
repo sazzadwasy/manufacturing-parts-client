@@ -12,8 +12,8 @@ const Navbar = () => {
     const navbarOptions =
         <>
             <li><Link to='/home'>Home</Link></li>
-            <li><Link to='/myprofile'>My profile</Link></li>
-            <li><Link to='/myorders'>My orders</Link></li>
+            <li><Link to='/myportfolio'>My Portfolio</Link></li>
+
             <li><Link to='/manageallorders'>Manage all orders</Link></li>
             <li>{user && <Link to='/dashboard'>Dashboard</Link>}</li>
             <li>{user

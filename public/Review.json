@@ -2,13 +2,13 @@
     {
         "_id": 5,
         "name": "Wasy",
-        "description": "The cylinder head is a three-piece assembly consisting of a lower member that contains the gas passages, serves as a mounting for the injector valves and the ignition plug, and forms part of the combustion chamber",
+        "review": "The cylinder head is a three-piece assembly consisting of a lower member that contains the gas passages, serves as a mounting for the injector valves and the ignition plug, and forms part of the combustion chamber",
         "ratings": "5 star"
     },
     {
         "_id": 6,
         "name": "Sazzad",
-        "description": "The idle air control (IAC) valve is located on the throttle body of fuel-injected engines, where it works with the vehicles ECU to electrically regulate airflow to the engine to ensure smooth idling",
+        "review": "The idle air control (IAC) valve is located on the throttle body of fuel-injected engines, where it works with the vehicles ECU to electrically regulate airflow to the engine to ensure smooth idling",
         "ratings": "5 star"
     },
     {
