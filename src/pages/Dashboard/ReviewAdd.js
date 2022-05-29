@@ -29,6 +29,7 @@ const ReviewAdd = () => {
     }
     return (
         <div className='px-5'>
+            <p className='text-3xl font-bold text-cyan-900'>Add a review</p>
             <form onSubmit={handleSubmit}>
                 <input type="text" value={user.displayName} class="input input-bordered input-primary w-full max-w-xs mt-2" readOnly disabled />
                 <br />

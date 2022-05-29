@@ -8,11 +8,12 @@ const Navbar = () => {
     const [user, loading] = useAuthState(auth)
     const logout = () => {
         signOut(auth);
+        localStorage.removeItem('accessToken')
     };
     const navbarOptions =
         <>
             <li><Link to='/home'>Home</Link></li>
-            <li><Link to='/myportfolio'>My Portfolio</Link></li>
+            <li><Link to='/blogs'>Blogs</Link></li>
 
             <li><Link to='/manageallorders'>Manage all orders</Link></li>
             <li>{user && <Link to='/dashboard'>Dashboard</Link>}</li>
