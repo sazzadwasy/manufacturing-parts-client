@@ -29,7 +29,6 @@ const UserTable = ({ user, refetch }) => {
             <th></th>
             <td>{email}</td>
             <td>{role !== 'admin' && <button onClick={makeAdmin} className='btn btn-sm'>Make Admin</button>}</td>
-            <td><button className='btn btn-sm'>Remove User</button></td>
         </tr>
     );
 };
