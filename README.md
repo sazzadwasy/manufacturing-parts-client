@@ -2,7 +2,7 @@
 ## Livesite : https://splendorous-liger-f94130.netlify.app/
 
 # About this website
-This is a website of bike inventory
+This is a website manufecturer website of car parts
 # Project description :
 * Used react for client side 
 * React router for one page application
