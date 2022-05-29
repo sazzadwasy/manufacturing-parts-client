@@ -8,7 +8,7 @@ const Purchase = () => {
     const { partId } = useParams()
     const [part, setPart] = useState({})
     const [user] = useAuthState(auth)
-    const { _id, name, minOrderQuantity, availableQuantity, img } = part
+    const { _id, name, perUnitPrice, img } = part
     useEffect(() => {
         fetch(`http://localhost:5000/purchase/${partId}`)
             .then(res => res.json())
@@ -22,6 +22,7 @@ const Purchase = () => {
             UserName: user.displayName,
             UserEmail: user.email,
             Quantity: event.target.quantity.value,
+            price: event.target.price.value,
             UserLocation: event.target.location.value
         }
         fetch('http://localhost:5000/orders', {
@@ -48,6 +49,8 @@ const Purchase = () => {
                         <h1 class="text-5xl font-bold mb-6">{name}</h1>
                         <form onSubmit={handleSubmit}>
                             <input type="text" value={name} class="input input-bordered input-primary w-full max-w-xs mt-2" readOnly />
+                            <br />
+                            <input name='price' type="text" value={perUnitPrice} placeholder="Price" class="input input-bordered input-primary w-full max-w-xs mt-2" readOnly />
                             <br />
                             <input type="text" value={user.displayName} class="input input-bordered input-primary w-full max-w-xs mt-2" readOnly />
                             <br />
