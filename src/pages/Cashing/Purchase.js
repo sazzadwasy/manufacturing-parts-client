@@ -10,7 +10,7 @@ const Purchase = () => {
     const [user] = useAuthState(auth)
     const { _id, name, perUnitPrice, img } = part
     useEffect(() => {
-        fetch(`http://localhost:5000/purchase/${partId}`)
+        fetch(`https://fathomless-falls-46329.herokuapp.com/purchase/${partId}`)
             .then(res => res.json())
             .then(data => setPart(data))
     }, [])
@@ -21,11 +21,11 @@ const Purchase = () => {
             PartName: name,
             UserName: user.displayName,
             UserEmail: user.email,
-            Quantity: event.target.quantity.value,
-            price: event.target.price.value,
+            Quantity: parseInt(event.target.quantity.value),
+            price: parseInt(event.target.price.value),
             UserLocation: event.target.location.value
         }
-        fetch('http://localhost:5000/orders', {
+        fetch('https://fathomless-falls-46329.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

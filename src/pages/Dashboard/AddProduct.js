@@ -12,11 +12,11 @@ const AddProduct = () => {
             name: event.target.name.value,
             img: event.target.img.value,
             description: event.target.description.value,
-            minOrderQuantity: event.target.minOrderQuantity.value,
-            availableQuantity: event.target.availableQuantity.value,
-            perUnitPrice: event.target.perUnitPrice.value
+            minOrderQuantity: parseInt(event.target.minOrderQuantity.value),
+            availableQuantity: parseInt(event.target.availableQuantity.value),
+            perUnitPrice: parseInt(event.target.perUnitPrice.value)
         }
-        fetch('http://localhost:5000/parts', {
+        fetch('https://fathomless-falls-46329.herokuapp.com/parts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

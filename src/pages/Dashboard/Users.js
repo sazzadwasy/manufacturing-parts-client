@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading';
 import UserTable from './UserTable';
 
 const Users = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/users').then(res => res.json()))
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://fathomless-falls-46329.herokuapp.com/users').then(res => res.json()))
     if (isLoading) {
         return <Loading></Loading>
     }

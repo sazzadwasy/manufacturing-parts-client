@@ -8,7 +8,7 @@ import CheckoutForm from './CheckoutForm';
 const stripePromise = loadStripe('pk_test_51L4iIuGJgr2a8I4qTDXiw7K8GPSZvV3IVfUQ5YXoW24PbR4FQYwyjjyn6R79SS2u86vgmEp59d3loCuF2Ez2NieO00d7mrVNGd');
 const Payment = () => {
     const { id } = useParams()
-    const url = `http://localhost:5000/orders/${id}`
+    const url = `https://fathomless-falls-46329.herokuapp.com/orders/${id}`
     const { data: order, isLoading } = useQuery(['order', id], () => fetch(url, {
         method: 'GET',
         headers: {
@@ -31,7 +31,7 @@ const Payment = () => {
             <div class="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
                 <div class="card-body">
                     <Elements stripe={stripePromise}>
-                        <CheckoutForm />
+                        <CheckoutForm order={order} />
                     </Elements>
                 </div>
             </div>

@@ -4,7 +4,7 @@ import Review from './Review';
 const Reviews = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://fathomless-falls-46329.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
@@ -15,7 +15,7 @@ const Reviews = () => {
              font-bold'>Customers Reviews</h2>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
-                    reviews.map(singleReview => <Review
+                    reviews.slice(0, 3).map(singleReview => <Review
                         key={singleReview._id}
                         singleReview={singleReview}
                     ></Review>)

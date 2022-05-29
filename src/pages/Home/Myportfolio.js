@@ -12,7 +12,9 @@ const Myportfolio = () => {
                     <p class="py-3 text-xl font-bold">Skills : Html,CSS,Javascript,React.js,Node.js</p>
                     <p class="py-3 text-xl font-bold">Education : HSC Student Mostofa Hakim Degree College</p>
                     <p class="py-3 text-xl font-bold">Locaion : Saraipara Pahartali,Chattogram</p>
-                    <button class="btn btn-primary">Get Started</button>
+                    <a className='text-xl block mt-4' href='https://rainbow-khapse-ca051f.netlify.app/'>Dental website</a>
+                    <a className='text-xl block mt-4' href='https://delightful-conkies-093666.netlify.app/'>Bike Inventory</a>
+                    <a className='text-xl block mt-4' href='https://spiffy-lolly-46b881.netlify.app/'>Car website</a>
                 </div>
             </div>
         </div>

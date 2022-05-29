@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const ManageProducts = () => {
     const [parts, setParts] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/parts')
+        fetch('https://fathomless-falls-46329.herokuapp.com/parts')
             .then(res => res.json())
             .then(data => setParts(data))
     }, [parts])
@@ -12,7 +12,7 @@ const ManageProducts = () => {
         console.log(id)
         const proceed = window.confirm('Are you want to delete a part?')
         if (proceed) {
-            const url = `http://localhost:5000/parts/${id}`
+            const url = `https://fathomless-falls-46329.herokuapp.com/parts/${id}`
             fetch(url, {
                 method: 'DELETE',
             })

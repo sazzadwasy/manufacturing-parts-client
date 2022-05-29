@@ -3,6 +3,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Myportfolio from '../Home/Myportfolio';
 
 const Navbar = () => {
     const [user, loading] = useAuthState(auth)
@@ -14,8 +15,7 @@ const Navbar = () => {
         <>
             <li><Link to='/home'>Home</Link></li>
             <li><Link to='/blogs'>Blogs</Link></li>
-
-            <li><Link to='/manageallorders'>Manage all orders</Link></li>
+            <li><Link to='/myportfolio'>My Portfolio</Link></li>
             <li>{user && <Link to='/dashboard'>Dashboard</Link>}</li>
             <li>{user
                 ? <button onClick={logout} class="btn btn-ghost">Logout</button>

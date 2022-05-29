@@ -13,7 +13,7 @@ const ReviewAdd = () => {
             review: event.target.review.value,
             ratings: event.target.ratings.value
         }
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://fathomless-falls-46329.herokuapp.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

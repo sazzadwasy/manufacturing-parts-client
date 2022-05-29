@@ -1,6 +1,5 @@
 [
     {
-        "_id": 1,
         "name": "Cylinder Head",
         "img": "https://www.roughtrax4x4.com/media/catalog/product/cache/18844361176c4db2753e9ef5e0ed678f/h/e/head28built_-_1-min.jpg",
         "description": "The cylinder head is a three-piece assembly consisting of a lower member that contains the gas passages, serves as a mounting for the injector valves and the ignition plug, and forms part of the combustion chamber",
@@ -9,7 +8,6 @@
         "perUnitPrice": "5000$"
     },
     {
-        "_id": 2,
         "name": "Air Control Valve",
         "img": "https://images.yaoota.com/Afeb8zm7T--c6HMJrFFuaugKfdI=/trim/yaootaweb-production-ke/media/crawledproductimages/3eeebc686ec9b20d64bb9e0601643e351752488f.jpg",
         "description": "The idle air control (IAC) valve is located on the throttle body of fuel-injected engines, where it works with the vehicle’s ECU to electrically regulate airflow to the engine to ensure smooth idling",
@@ -18,7 +16,6 @@
         "perUnitPrice": "5000$"
     },
     {
-        "_id": 3,
         "name": "Turbo Charger",
         "img": "https://5.imimg.com/data5/RD/LB/MY-53866801/turbo-car-turbocharger-500x500.jpg",
         "description": "A turbocharger is a system that helps an engine produce more power and torque through forced induction. Essentially, a turbo sucks in air, chills it, and then force-feeds the engine more air than what it would get through its standard intake",
@@ -27,7 +24,6 @@
         "perUnitPrice": "5000$"
     },
     {
-        "_id": 4,
         "name": "Piston",
         "img": "https://thumbs.dreamstime.com/b/close-up-new-internal-combustion-engine-piston-gray-gradient-background-concept-spare-parts-183827446.jpg",
         "description": "Pistons work by transferring the force output of an expanding gas in the cylinder to a crankshaft, which provides rotational momentum to a flywheel.",
@@ -36,21 +32,19 @@
         "perUnitPrice": "5000$"
     },
     {
-        "_id": 5,
         "name": "Valve Tappet",
         "img": "https://image.made-in-china.com/202f0j00EmniwabFrDqG/Hydraulic-Valve-Tappet-for-Toyota-1y-2y-3y-4y-13750-71010-Valve-Lifter.jpg",
         "description": "Tappet clearance, also known as valve clearance, is the small gap between the rocker arm and the top of the valve stem (Yoke). Engineers can observe and adjust tappet clearance only when the valves are in a closed position and the engine is cooled at the compression stroke",
         "minOrderQuantity": "200",
         "availableQuantity": "1000",
-        "perUnitPrice": "5000$"
+        "perUnitPrice": "5000"
     },
     {
-        "_id": 6,
         "name": "Suspention",
         "img": "https://images.cdn.circlesix.co/image/2/900/600/5/uploads/posts/2018/08/bec0c1e11b133fa7dae7ea6a5f9b29dd.jpg",
         "description": "Suspension is the system of tires, tire air, springs, shock absorbers, and linkages that connects a vehicle to its wheels and allow relative movement between the two. Suspension systems must support both road holding/handling and ride quality, which is at odds with each other",
         "minOrderQuantity": "200",
         "availableQuantity": "1000",
-        "perUnitPrice": "5000$"
+        "perUnitPrice": "5000"
     }
 ]
