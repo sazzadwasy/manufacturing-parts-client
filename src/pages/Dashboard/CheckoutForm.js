@@ -7,10 +7,11 @@ const CheckoutForm = ({ order }) => {
     const elements = useElements()
     const [cardError, setCardError] = useState('');
     const [paySuccess, setPaySuccess] = useState('');
+    const [processing, setProcessing] = useState(false);
     const [clientSecret, setClientSecret] = useState('');
     const [transactionId, setTransactionId] = useState('');
 
-    const { price, UserName, UserEmail } = order
+    const { _id, price, UserName, UserEmail } = order
     useEffect(() => {
         fetch('https://fathomless-falls-46329.herokuapp.com/create-payment-intent', {
             method: 'POST',
@@ -46,6 +47,7 @@ const CheckoutForm = ({ order }) => {
 
         setCardError(error?.message || '')
         setPaySuccess('')
+        setProcessing(true)
 
         const { paymentIntent, error: intentError } = await stripe.confirmCardPayment(
             clientSecret,
@@ -61,12 +63,31 @@ const CheckoutForm = ({ order }) => {
         );
         if (intentError) {
             setCardError(intentError?.message);
+            setProcessing(false)
         }
         else {
             setCardError('')
             setTransactionId(paymentIntent.id);
             console.log(paymentIntent)
             setPaySuccess('Your payment successful')
+
+
+            const payment = {
+                order: _id,
+                transactionId: paymentIntent.id
+            }
+            fetch(`https://fathomless-falls-46329.herokuapp.com/orders/${_id}`, {
+                method: 'PATCH',
+                headers: {
+                    'content-type': 'application/json',
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                },
+                body: JSON.stringify(payment)
+            }).then(res => res.json())
+                .then(data => {
+                    setProcessing(false)
+                    console.log(data)
+                })
         }
 
     }

@@ -8,6 +8,13 @@ import auth from '../../firebase.init';
 const MyOrders = () => {
     const [orders, setOrders] = useState([])
     const [user] = useAuthState(auth)
+    const [payment, setPayment] = useState([])
+
+    useEffect(() => {
+        fetch('https://fathomless-falls-46329.herokuapp.com/payments')
+            .then(res => res.json())
+            .then(data => setPayment(data))
+    }, [payment, orders])
     useEffect(() => {
         fetch(`https://fathomless-falls-46329.herokuapp.com/orders?buyer=${user.email}`, {
             method: 'GET',
@@ -65,10 +72,10 @@ const MyOrders = () => {
                                 <td>{order.UserEmail}</td>
                                 <td>
                                     {(!order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-success'>Pay</button></Link>}
-                                    {(order.paid) && <span className='text-sm text-cyan-900 font-bold'>Paid</span>}
+                                    {(order.paid) && <span className='text-lg text-green-400 font-bold'>Paid</span>}
                                 </td>
-                                <td></td>
-                                <td><button onClick={() => handleDelete(order._id)} className='btn btn-xs btn-error'>Cancel</button></td>
+                                <td className='text-cyan-800 font-bold text-lg'>{order.transactionId}</td>
+                                {(!order.paid) && <td><button onClick={() => handleDelete(order._id)} className='btn btn-xs btn-error'>Cancel</button> </td>}
 
                             </tr>)
                         }

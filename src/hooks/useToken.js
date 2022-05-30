@@ -6,7 +6,7 @@ const useToken = (user) => {
         const email = user?.user?.email
         const currentUser = { email: email }
         if (email) {
-            fetch(`https://fathomless-falls-46329.herokuapp.com/user/${email}`, {
+            fetch(`https://fathomless-falls-46329.herokuapp.com/user/login/${email}`, {
                 method: "PUT",
                 headers: {
                     'content-typle': 'application/json'
