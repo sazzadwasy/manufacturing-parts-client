@@ -9,10 +9,10 @@ const Reviews = () => {
             .then(data => setReviews(data))
     }, [])
     return (
-        <div>
-            <h2 className='py-14 text-4xl
+        <div className='my-6'>
+            <h2 className='py-14 text-5xl
              text-center text-cyan-900 
-             font-bold'>Customers Reviews</h2>
+             font-bold'>Customer Reviews</h2>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
                     reviews.slice(0, 3).map(singleReview => <Review

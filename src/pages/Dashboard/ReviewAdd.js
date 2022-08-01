@@ -31,15 +31,15 @@ const ReviewAdd = () => {
         <div className='px-5'>
             <p className='text-3xl font-bold text-cyan-900'>Add a review</p>
             <form onSubmit={handleSubmit}>
-                <input type="text" value={user.displayName} class="input input-bordered input-primary w-full max-w-xs mt-2" readOnly disabled />
+                <input type="text" value={user.displayName} class="input input-bordered input-info w-full max-w-xs mt-2" readOnly disabled />
                 <br />
-                <input type="text" value={user.email} class="input input-bordered input-primary w-full max-w-xs mt-2" readOnly disabled />
+                <input type="text" value={user.email} class="input input-bordered input-info w-full max-w-xs mt-2" readOnly disabled />
                 <br />
-                <input name='review' type="text" placeholder="Write a review" class="input input-bordered input-primary w-full max-w-xs mt-2" />
+                <input name='review' type="text" placeholder="Write a review" class="input input-bordered input-info w-full max-w-xs mt-2" />
                 <br />
-                <input name='ratings' type="text" placeholder="Ratings" class="input input-bordered input-primary w-full max-w-xs mt-2" />
+                <input name='ratings' type="text" placeholder="Ratings" class="input input-bordered input-info w-full max-w-xs mt-2" />
                 <br />
-                <input type="submit" value="Post Review" class="btn btn-primary w-full max-w-xs mt-2" />
+                <input type="submit" value="Post Review" class="btn btn-info w-full max-w-xs mt-2" />
             </form>
         </div>
     );

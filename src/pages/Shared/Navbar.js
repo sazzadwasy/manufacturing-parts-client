@@ -13,13 +13,13 @@ const Navbar = () => {
     };
     const navbarOptions =
         <>
-            <li><Link to='/home'>Home</Link></li>
-            <li><Link to='/blogs'>Blogs</Link></li>
-            <li><Link to='/myportfolio'>My Portfolio</Link></li>
-            <li>{user && <Link to='/dashboard'>Dashboard</Link>}</li>
+            <li><Link to='/home' className='font-bold'>Home</Link></li>
+            <li><Link to='/blogs' className='font-bold'>Blogs</Link></li>
+            <li><Link to='/myportfolio' className='font-bold'>Portfolio</Link></li>
+            <li>{user && <Link to='/dashboard' className='font-bold'>Dashboard</Link>}</li>
             <li>{user
-                ? <button onClick={logout} class="btn btn-ghost">Logout</button>
-                : <Link to='/login'>Login</Link>}</li>
+                ? <button onClick={logout} class="btn btn-ghost font-bold" >Logout</button>
+                : <Link to='/login' className='font-bold'>Login</Link>}</li>
         </>
     return (
         <div class="navbar bg-base-100 py-4">
@@ -32,7 +32,7 @@ const Navbar = () => {
                         {navbarOptions}
                     </ul>
                 </div>
-                <Link to='/' class="btn btn-ghost normal-case text-3xl font-bold text-cyan-800">Manufacturer Parts</Link>
+                <Link to='/' class="btn btn-ghost normal-case text-2xl font-bold text-cyan-800">Manufacturer Parts</Link>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal p-0">
